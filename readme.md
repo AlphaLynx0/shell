@@ -1,9 +1,9 @@
 Shell
 =====
 
-A minimal shell for x64 Linux system.
+A minimal shell for x64 Linux systems.
 
-This implementation strives to be as simple as possible to understand from top to bottom. It can be challenging to understand where user applications end and the kernel begins, especially with middleware such as libc present. This shell there for includes no external libraries, including libc. A limited number of x64 Linux system calls are provided via `syscall.h`. These are:
+This implementation strives to be as simple as possible to understand from top to bottom. It can be challenging to understand where user applications end and the kernel begins, especially with middleware such as libc present. This shell therefore includes no external libraries, including libc. A limited number of x64 Linux system calls are provided via `syscall.h`. These are:
 
 - System call 0 - `read`
 - System call 1 - `write`
@@ -12,14 +12,14 @@ This implementation strives to be as simple as possible to understand from top t
 - System call 60 - `exit`
 - System call 61 - `wait4`
 
-It turns out that using just these four system calls, we can implement a basic shell.
+It turns out that using just these six system calls, we can implement a basic shell.
 
 What is a shell?
 ----------------
 
 At its most basic level, a shell is simply a program that exposes the operating system to a user. Shells can be graphical or they can use a command-line interface. A basic shell should allow a user to launch programs on the system.
 
-A simple CLI shell may operate as a read-eval-print loop. It accepts input from a user, evaluates it, then displays any results of the evalation. In order to implement a REPL, we need a loop and the `read` and `write` system calls.
+A simple CLI shell may operate as a [read-eval-print loop](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop). It accepts input from a user, evaluates it, then displays any results of the evalation. In order to implement a REPL, we need a loop and the `read` and `write` system calls.
 
 Running Programs
 ----------------
