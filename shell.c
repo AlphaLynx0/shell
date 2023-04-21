@@ -1,13 +1,5 @@
 #include "syscall.h"
 
-#define NULL 0
-#define CHILD 0
-#define STDIN_FILENO 0
-#define STDOUT_FILENO 1
-#define STDERR_FILENO 2
-#define UNTRACED 2
-#define STOPPED 0177
-
 char line[1024];
 char *tokens[1024];
 

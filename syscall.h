@@ -1,3 +1,11 @@
+#define NULL 0
+#define CHILD 0
+#define STDIN_FILENO 0
+#define STDOUT_FILENO 1
+#define STDERR_FILENO 2
+#define UNTRACED 2
+#define STOPPED 0177
+
 static inline long read(int fd, char *buf, int count) {
   /*
    * Executes the `read` system call
