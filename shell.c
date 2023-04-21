@@ -21,6 +21,10 @@ char **get_args(char *line) {
   /*
    * Splits a line of shell input into an array of arguments
    *
+   * This functions uses a shared global array for its return value. It is
+   * not thread safe and only the most recently returned array of tokens
+   * will be valid.
+   *
    * Returns the array of arguments
    */
   static char *tokens[1024];
