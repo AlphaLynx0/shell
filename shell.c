@@ -1,8 +1,5 @@
 #include "syscall.h"
 
-char line[1024];
-char *tokens[1024];
-
 int strcmp(const char *s1, const char *s2) {
   /*
    * Compares two strings s1 and s2. 
@@ -26,6 +23,8 @@ char **get_args(char *line) {
    *
    * Returns the array of arguments
    */
+  static char *tokens[1024];
+
   int token = 0;
   int in_tok = 0;
 
@@ -104,6 +103,8 @@ void eval_and_print(char *line) {
 }
 
 void _start(int argc, char **argv) {
+  char line[1024];
+
   // Read-eval-print loop
   while (1) {
     // TODO: Use `write` to display a prompt such as "> "
