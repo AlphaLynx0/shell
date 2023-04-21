@@ -54,4 +54,6 @@ Hello, world!
 > exit
 ```
 
+Note that this simple shell implementation on supports absolute paths, so programs like `ls` need to be executed as `/bin/ls` or similar.
+
 You should even be able to run interactive programs such as `/usr/bin/vi`.
