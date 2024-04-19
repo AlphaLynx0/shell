@@ -106,7 +106,7 @@ void eval_and_print(char *line) {
   }
 }
 
-void _start(int argc, char **argv) {
+void _start() {
   char line[1024];
 
   // Read-eval-print loop
