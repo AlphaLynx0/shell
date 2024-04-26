@@ -85,7 +85,7 @@ void eval_and_print(char *line) {
       // TODO: Call execve to replace the program code for the child
       // `man execve` may be helpful here.
       // We can pass a `NULL` environment
-      int execve_result = -1;
+      int execve_result = execve(args[0], args, NULL);
 
       if (execve_result < 0) {
         write(STDERR_FILENO, "exec error\n", 11);
