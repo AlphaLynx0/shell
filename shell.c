@@ -70,8 +70,7 @@ void eval_and_print(char *line) {
     if (args[1] == NULL) {
       write(STDERR_FILENO, "expected argument to \"cd\"\n", 26);
     } else {
-      // TODO: Call the chdir system call passing argument 1 as the path
-      int chdir_result = -1;
+      int chdir_result = chdir(args[1]);
 
       if (chdir_result != 0) {
         write(STDERR_FILENO, "error changing directory\n", 25);
