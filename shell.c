@@ -79,7 +79,7 @@ void eval_and_print(char *line) {
   } else {
     // Run a child process
     // TODO: Fork the process
-    int pid = -1;
+    int pid = fork();
 
     if (pid == CHILD) {
       // TODO: Call execve to replace the program code for the child
