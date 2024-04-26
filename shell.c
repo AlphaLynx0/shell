@@ -63,8 +63,7 @@ void eval_and_print(char *line) {
     return;
 
   if (strcmp(args[0], "exit") == 0) {
-    // `exit` builtin
-    // TODO: Call the exit system call with exit code 0
+    exit(0);
     __builtin_unreachable();
   } else if (strcmp(args[0], "cd") == 0) {
     // `cd` builtin
